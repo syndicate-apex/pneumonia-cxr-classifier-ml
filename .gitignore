@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+pneumonia-env/
+.env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model files
+*.pth
+
+# VS Code
+.vscode/
+
+#Data sets
+chest_xray/
