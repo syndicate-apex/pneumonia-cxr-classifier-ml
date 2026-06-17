@@ -1,0 +1,12 @@
+.git
+.vscode
+
+__pycache__
+
+*.ipynb
+
+chest_xray/
+
+.env
+
+.streamlit

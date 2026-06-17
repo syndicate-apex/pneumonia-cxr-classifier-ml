@@ -7,7 +7,6 @@ import torch.nn as nn
 from torchvision import transforms, models
 from PIL import Image
 import numpy as np
-import cv2
 from datetime import datetime
 
 from pytorch_grad_cam import GradCAM

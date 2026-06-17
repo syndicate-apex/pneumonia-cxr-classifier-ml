@@ -9,9 +9,6 @@ pneumonia-env/
 # Jupyter
 .ipynb_checkpoints/
 
-# Model files
-*.pth
-
 # VS Code
 .vscode/
 
