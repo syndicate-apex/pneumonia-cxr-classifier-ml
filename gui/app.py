@@ -12,6 +12,7 @@ from datetime import datetime
 
 from pytorch_grad_cam import GradCAM
 from pytorch_grad_cam.utils.image import show_cam_on_image
+from pathlib import Path
 
 # -----------------------------
 # Page Config
@@ -47,6 +48,10 @@ st.markdown("""
 @st.cache_resource
 def load_model():
 
+    BASE_DIR = Path(__file__).resolve().parent.parent
+
+    MODEL_PATH = BASE_DIR / "model" / "pneumonia_classifier.pth"
+    
     model = models.efficientnet_b0(weights=None)
 
     model.classifier = nn.Linear(
@@ -55,11 +60,11 @@ def load_model():
     )
 
     model.load_state_dict(
-        torch.load(
-            "../model/pneumonia_classifier.pth",
-            map_location="cpu"
-        )
+    torch.load(
+        MODEL_PATH,
+        map_location="cpu"
     )
+)
 
     model.eval()
 
